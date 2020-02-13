@@ -12,11 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.home');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 //Admin roots
-Route::get('/home', 'AdminCotroller@index')->name('home');
+Route::get('/home', 'AdminController@index')->name('home');
+Route::get('/products', 'AdminController@DisplayProducts')->name('products');
