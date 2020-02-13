@@ -14,7 +14,18 @@ class CreateDailyProductionsTable extends Migration
     public function up()
     {
         Schema::create('daily_productions', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->uuid('id');
+            $table->primary('id');
+            $table->string('production_category')->index();
+            $table->foreign('production_category')
+            ->references('category')
+            ->on('products');
+            $table->string('product_name')->index();
+            $table->foreign('product_name')
+            ->references('name_of_product')
+            ->on('products');
+            $table->integer('number_of_products');
+            $table->date('production_date');
             $table->timestamps();
         });
     }
