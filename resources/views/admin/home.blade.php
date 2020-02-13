@@ -82,7 +82,7 @@ body {font-family: "Lato", sans-serif;}
 
 <div class="sidebar">
   <a href="#home"><i class="fa fa-fw fa-home"></i> Dashboard</a><br>
-  <a href="{{route('/products')}}"><i class="fa fa-fw fa-wrench"></i>Products</a><br>
+  <a href="{{url('/products')}}"><i class="fa fa-fw fa-wrench"></i>Products</a><br>
   <a href="#clients"><i class="fa fa-fw fa-user"></i>Expenses</a><br>
   <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Production</a><br>
   <a href="#contact"><i class="fa fa-shopping-cart"></i> Orders</a><br>
